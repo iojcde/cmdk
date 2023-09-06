@@ -414,11 +414,11 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>((props, forwarded
     if (item) {
       if (item.parentElement?.firstChild === item) {
         // First item in Group, ensure heading is in view
-        item.closest(GROUP_SELECTOR)?.querySelector(GROUP_HEADING_SELECTOR)?.scrollIntoView({ block: 'nearest' })
+        item.closest(GROUP_SELECTOR)?.querySelector(GROUP_HEADING_SELECTOR)?.scrollIntoView({ block: 'nearest', behavior: { smooth: true } })
       }
 
       // Ensure the item is always in view
-      item.scrollIntoView({ block: 'nearest' })
+      item.scrollIntoView({ block: 'nearest', behavior: { smooth: true } })
     }
   }
 
